@@ -212,7 +212,20 @@
 }
 
 /* ==========================================================================
-   DA VINCI CODE THEME ── warm dark + gold
+   /* Dracula input fixes */
+[data-theme="dracula"] .input,
+[data-theme="dracula"] .textarea,
+[data-theme="dracula"] .select {
+  background: #1e1f2b;
+  border-color: #44475a;
+  color: #f8f8f2;
+}
+[data-theme="dracula"] .input::placeholder,
+[data-theme="dracula"] .textarea::placeholder {
+  color: #6272a4;
+}
+
+DA VINCI CODE THEME ── warm dark + gold
    ========================================================================== */
 
 [data-theme="davinci"] {

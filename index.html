@@ -3,38 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>teamplts — Compact SaaS Component Gallery</title>
-<meta name="description" content="217 copy-paste UI components for SaaS dashboards. 5 themes, zero dependencies.">
+<title>teamplts — SaaS Component Gallery</title>
+<meta name="description" content="217 copy-paste SaaS UI components. 5 themes. Zero dependencies.">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: system-ui, -apple-system, sans-serif; background:#f8fafc; color:#0f172a; }
-  .page { max-width:960px; margin:0 auto; padding:40px 20px; }
-  h1 { font-size:2rem; margin-bottom:8px; }
+  body { font-family:system-ui,-apple-system,sans-serif; background:#f8fafc; color:#0f172a; display:grid; place-items:center; min-height:100vh; padding:40px 20px; }
+  main { max-width:640px; text-align:center; display:grid; gap:24px; }
+  h1 { font-size:2.5rem; }
   h1 span { background:linear-gradient(135deg,#2563eb,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-  .sub { color:#64748b; margin-bottom:32px; font-size:1.1rem; }
-  .btns { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:48px; }
-  .btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:8px; font-weight:600; font-size:0.95rem; text-decoration:none; cursor:pointer; border:none; }
+  .sub { color:#64748b; font-size:1.1rem; line-height:1.5; }
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:8px 0; }
+  .stat { padding:16px; background:#fff; border-radius:12px; border:1px solid #e2e8f0; }
+  .stat strong { display:block; font-size:1.5rem; }
+  .stat span { font-size:0.85rem; color:#64748b; }
+  .btns { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+  .btn { padding:12px 28px; border-radius:10px; font-weight:600; text-decoration:none; font-size:1rem; }
   .btn-primary { background:#2563eb; color:#fff; }
   .btn-primary:hover { background:#1d4ed8; }
   .btn-ghost { background:#fff; color:#334155; border:1px solid #e2e8f0; }
   .btn-ghost:hover { background:#f1f5f9; }
-  iframe { width:100%; height:80vh; border:1px solid #e2e8f0; border-radius:12px; background:#fff; }
-  .foot { margin-top:32px; text-align:center; color:#94a3b8; font-size:0.85rem; }
+  .foot { color:#94a3b8; font-size:0.85rem; }
   .foot a { color:#64748b; }
 </style>
 </head>
 <body>
-<div class="page">
-  <h1><span>teamplts</span> — Component Gallery</h1>
-  <p class="sub">217 copy-paste SaaS dashboard components. Browse, copy HTML, paste into your project. 5 themes. Zero dependencies.</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="https://github.com/hugobeyer/teamplts">Star on GitHub</a>
-    <a class="btn btn-ghost" href="./gallery.html">Fullscreen Gallery</a>
+<main>
+  <h1><span>teamplts</span></h1>
+  <p class="sub">217 copy-paste UI components for SaaS dashboards. Browse, copy HTML, paste into your project. 5 themes. Zero external dependencies.</p>
+  <div class="stats">
+    <div class="stat"><strong>217</strong><span>Components</span></div>
+    <div class="stat"><strong>16</strong><span>Categories</span></div>
+    <div class="stat"><strong>5</strong><span>Themes</span></div>
+    <div class="stat"><strong>0</strong><span>Dependencies</span></div>
   </div>
-  <iframe src="./gallery.html" title="Component Gallery"></iframe>
+  <div class="btns">
+    <a class="btn btn-primary" href="./gallery.html">Browse Gallery</a>
+    <a class="btn btn-ghost" href="https://github.com/hugobeyer/teamplts">GitHub</a>
+  </div>
   <div class="foot">
     MIT licensed · <a href="https://github.com/hugobeyer/teamplts">github.com/hugobeyer/teamplts</a>
   </div>
-</div>
+</main>
 </body>
 </html>
