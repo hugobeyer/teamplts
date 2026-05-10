@@ -1,7 +1,7 @@
 {
-  "name": "saasblocks",
+  "name": "teamplts",
   "version": "1.0.0",
-  "description": "Compact SaaS UI component library — ~200 components, 5 themes, and a gallery viewer for building dashboards fast.",
+  "description": "Compact SaaS UI component templates — 217 components, 5 themes, ready to copy into any dashboard.",
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -19,12 +19,13 @@
     "components",
     "ui",
     "dashboard",
-    "tailwind-alternative",
+    "templates",
     "gallery"
   ],
-  "author": "",
+  "author": "Hugo Beyer",
   "license": "MIT",
   "devDependencies": {
+    "archiver": "^8.0.0",
     "clean-css": "^5.3.3",
     "puppeteer": "^22.0.0",
     "terser": "^5.27.0"

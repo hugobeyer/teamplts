@@ -61,40 +61,23 @@ execSync("node scripts/build.js", { cwd: ROOT, stdio: "inherit" });
 const zipName = `saasblocks-pro-v${VERSION}.zip`;
 const zipPath = path.join(ROOT, "dist", "pro", zipName);
 
-let Archiver;
+// Create zip using platform-native commands (no archiver dependency needed)
+console.log(`\n▶ Creating ${zipName}...`);
+const proDir = path.join(ROOT, "dist", "pro");
+if (fs.existsSync(zipPath)) fs.unlinkSync(zipPath);
+
 try {
-  Archiver = require("archiver");
-} catch (_) {
-  console.warn("\n⚠  archiver not installed — skipping zip creation.");
-  console.warn("   Install with: npm install archiver");
-  console.warn(`   Then manually zip dist/pro/ → ${zipName}`);
-}
-
-if (Archiver) {
-  console.log(`\n▶ Creating ${zipName}...`);
-
-  const output = fs.createWriteStream(zipPath);
-  const archive = Archiver("zip", { zlib: { level: 9 } });
-
-  archive.on("error", (err) => {
-    throw err;
-  });
-
-  output.on("close", () => {
-    console.log(`✓ ${zipName}  (${(archive.pointer() / 1024).toFixed(1)} KB)`);
-    console.log(`  Location: dist/pro/${zipName}`);
-  });
-
-  archive.pipe(output);
-
-  // Add everything from dist/pro/ except any existing zips
-  const proDir = path.join(ROOT, "dist", "pro");
-  archive.directory(proDir, false, (entry) => {
-    // Exclude any existing zip files from the archive
-    return !entry.name.endsWith(".zip");
-  });
-
-  archive.finalize();
+  if (process.platform === 'win32') {
+    execSync(`powershell -NoProfile -Command "Compress-Archive -Path '${proDir}\\*' -DestinationPath '${zipPath}' -Force"`, { stdio: 'pipe' });
+  } else {
+    execSync(`cd "${proDir}" && zip -r "${zipName}" . -x "*.zip"`, { stdio: 'pipe' });
+  }
+  const zipSize = (fs.statSync(zipPath).size / 1024).toFixed(1);
+  console.log(`✓ ${zipName}  (${zipSize} KB)`);
+  console.log(`  Location: dist/pro/${zipName}`);
+} catch (err) {
+  console.error('Zip failed:', err.message);
+  console.warn('⚠  Manually compress dist/pro/ (excluding .zip files)');
 }
 
 // ---------------------------------------------------------------------------
