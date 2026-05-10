@@ -1,0 +1,130 @@
+import { icon, button, chip, toggle } from '../../engine/helpers.js';
+
+export default [
+  {
+    name: "Breadcrumbs",
+    group: "Navigation",
+    notes: "Compact path",
+    code: `<div class="row"><span class="text">Home</span><span class="text">/</span><span class="text">Projects</span><span class="text">/</span><strong class="tiny">Current</strong></div>`,
+  },
+  {
+    name: "Tabs compact",
+    group: "Navigation",
+    notes: "Segmented tabs",
+    code: toggle(["Overview", "Data", "Roles"], 0),
+  },
+  {
+    name: "Stepper",
+    group: "Navigation",
+    notes: "Three steps",
+    code: `<div class="row between">${chip("1", "blue")}<span class="divider" style="flex:1"></span>${chip("2")}<span class="divider" style="flex:1"></span>${chip("3")}</div>`,
+  },
+  {
+    name: "Pagination",
+    group: "Navigation",
+    notes: "Pager",
+    code: `<div class="row between">${button("Prev")}<span class="text">Page 1 of 8</span>${button("Next")}</div>`,
+  },
+  {
+    name: "Top nav",
+    group: "Navigation",
+    notes: "Links no borders",
+    code: `<div class="row"><a class="pill-link" href="#">Overview</a><a class="pill-link" href="#">Tasks</a><a class="pill-link" href="#">Files</a><a class="pill-link" href="#">Team</a></div>`,
+  },
+  {
+    name: "Segmented nav",
+    group: "Navigation",
+    notes: "Border needed as control",
+    code: toggle(["Day", "Week", "Month"], 1),
+  },
+  {
+    name: "Command item",
+    group: "Navigation",
+    notes: "Menu row",
+    code: `<div class="row between"><span class="row">${icon("search")}<span class="text">Open command palette</span></span><span class="kbd">Ctrl K</span></div>`,
+  },
+  {
+    name: "Sidebar item",
+    group: "Navigation",
+    notes: "Plain row",
+    code: `<div class="stack"><div class="row">${icon("layout-dashboard")}<span class="text">Dashboard</span></div><div class="row">${icon("list-todo")}<span class="text">Tasks</span></div><div class="row">${icon("settings")}<span class="text">Settings</span></div></div>`,
+  },
+  {
+    name: "Pagination compact",
+    group: "Navigation",
+    notes: "Grouped controls",
+    code: `<div class="row between"><div class="seg"><button type="button">${icon("chevron-left")}</button><button class="active" type="button">1</button><button type="button">2</button><button type="button">${icon("chevron-right")}</button></div><span class="tiny">24 rows</span></div>`,
+  },
+  {
+    name: "Tab with count",
+    group: "Navigation",
+    notes: "Segmented count",
+    code: `<div class="seg"><button class="active" type="button">Open ${chip("8", "blue")}</button><button type="button">Done ${chip("21")}</button></div>`,
+  },
+  {
+    name: "Underline tabs",
+    group: "Navigation",
+    notes: "Border indicator",
+    code: `<div class="tab-line"><button class="act" type="button">Overview</button><button type="button">Analytics</button><button type="button">Settings</button></div>`,
+  },
+  {
+    name: "Pill tabs",
+    group: "Navigation",
+    notes: "Rounded pills",
+    code: `<div class="tab-pill"><button class="act" type="button">All</button><button type="button">Active</button><button type="button">Draft</button><button type="button">Archived</button></div>`,
+  },
+  {
+    name: "Icon tabs",
+    group: "Navigation",
+    notes: "Icons + labels",
+    code: `<div class="tab-icon"><button class="act" type="button">${icon("layout-dashboard")}Overview</button><button type="button">${icon("list-todo")}Tasks</button><button type="button">${icon("settings")}</button></div>`,
+  },
+  {
+    name: "Vertical tabs",
+    group: "Navigation",
+    notes: "Side stacked",
+    code: `<div class="tab-v"><button class="act" type="button">${icon("layout-dashboard")}Dashboard</button><button type="button">${icon("list-todo")}Tasks</button><button type="button">${icon("users")}Team</button></div>`,
+  },
+  {
+    name: "Breadcrumb tabs",
+    group: "Navigation",
+    notes: "Link path",
+    code: `<div class="row"><a class="pill-link" href="#">Workspace</a><span class="text">/</span><a class="pill-link" href="#">Projects</a><span class="text">/</span><span class="text">Current</span></div>`,
+  },
+  {
+    name: "Status tabs",
+    group: "Navigation",
+    notes: "With dots",
+    code: `<div class="seg"><button class="active" type="button"><span class="status-dot green" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Healthy</button><button type="button"><span class="status-dot yellow" style="display:inline-block;vertical-align:middle;margin-right:3px"></span>Warn</button></div>`,
+  },
+  {
+    name: "Filter tabs with counts",
+    group: "Navigation",
+    notes: "Badge numbers",
+    code: `<div class="seg"><button class="active" type="button">All <span class="badge-count ghost">12</span></button><button type="button">Open <span class="badge-count">8</span></button><button type="button">Done</button></div>`,
+  },
+  {
+    name: "Section nav",
+    group: "Navigation",
+    notes: "Grouped links",
+    code: `<div class="stack"><div class="tiny" style="margin:2px 0">Main</div><div class="row">${icon("layout-dashboard")}<span class="text">Dashboard</span></div><div class="row">${icon("list-todo")}<span class="text">Tasks</span></div><div class="tiny" style="margin:2px 0">Account</div><div class="row">${icon("settings")}<span class="text">Settings</span></div></div>`,
+  },
+  {
+    name: "Step wizard",
+    group: "Navigation",
+    notes: "Numbered steps",
+    code: `<div class="row between"><div class="row">${chip("1", "blue")}<span class="text">Profile</span></div>${icon("chevron-right")}<div class="row">${chip("2")}<span class="text">Team</span></div>${icon("chevron-right")}<div class="row">${chip("3")}<span class="text">Billing</span></div></div>`,
+  },
+  {
+    name: "Toggle view",
+    group: "Navigation",
+    notes: "Two states",
+    code: `<div class="row between"><div class="seg"><button class="active" type="button">${icon("list")}List</button><button type="button">${icon("grid")}Grid</button></div><span class="tiny">Show all</span></div>`,
+  },
+  {
+    name: "Side nav expanded",
+    group: "Navigation",
+    notes: "Full sidebar",
+    code: `<div class="stack" style="background:#f8fafc;border-radius:5px;padding:6px;width:100%"><div class="tab-v"><button class="act" type="button">${icon("layout-dashboard")}Dashboard</button><button type="button">${icon("list-todo")}Tasks <span class="badge-count" style="margin-left:auto">3</span></button><button type="button">${icon("users")}Team</button><button type="button">${icon("settings")}Settings</button></div></div>`,
+  },
+];

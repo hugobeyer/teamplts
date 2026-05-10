@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Compact SaaS Components — 200+ ready-to-copy UI components
+        </title>
+        <meta
+            name="description"
+            content="200+ compact, ready-to-copy UI components for SaaS dashboards. 5 themes, copy-paste friendly, zero-config."
+        />
+
+        <!-- Free tier CSS from unpkg CDN -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/saasblocks/dist/free/saasblocks.min.css"
+        />
+        <link rel="stylesheet" href="../src/css/gallery.css" />
+
+        <!-- Preconnect for faster font loading -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* ── Landing page overrides ── */
+            body {
+                padding: 0;
+            }
+            .landing {
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: var(--s-xl);
+            }
+
+            /* Hero */
+            .hero {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .hero h1 {
+                font-size: 42px;
+                font-weight: 800;
+                line-height: 1.1;
+                margin: 0 0 var(--s-md);
+                letter-spacing: -0.02em;
+            }
+            .hero .gradient-text {
+                background: linear-gradient(135deg, var(--primary), #7c3aed);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .hero p {
+                font-size: 18px;
+                color: var(--muted);
+                max-width: 580px;
+                margin: 0 auto var(--s-lg);
+                line-height: 1.5;
+            }
+            .hero-cta {
+                display: flex;
+                gap: var(--s-md);
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .hero-cta .btn {
+                padding: 0 16px;
+                height: 32px;
+                font-size: 13px;
+                font-weight: 600;
+                border-radius: var(--r-lg);
+            }
+
+            /* Stats bar */
+            .stats-bar {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                padding: 24px 0;
+                border-top: 1px solid var(--divider-color);
+                border-bottom: 1px solid var(--divider-color);
+                margin: 20px 0 40px;
+            }
+            .stats-bar .stat-item {
+                text-align: center;
+            }
+            .stats-bar .stat-num {
+                font-size: 28px;
+                font-weight: 800;
+                color: var(--text);
+                line-height: 1;
+            }
+            .stats-bar .stat-label {
+                font-size: var(--font-sm);
+                color: var(--muted);
+                margin-top: 4px;
+            }
+
+            /* Section headings */
+            .section-title {
+                font-size: 24px;
+                font-weight: 700;
+                text-align: center;
+                margin: 48px 0 20px;
+            }
+            .section-sub {
+                text-align: center;
+                color: var(--muted);
+                margin: -12px 0 28px;
+            }
+
+            /* Embedded gallery */
+            .gallery-preview {
+                border: 1px solid var(--line);
+                border-radius: var(--r-lg);
+                padding: var(--s-md);
+                background: var(--panel-alt);
+                margin: 0 0 48px;
+            }
+
+            /* Pricing cards */
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: var(--s-lg);
+                margin: 0 0 48px;
+            }
+            .pricing-card {
+                border: 1px solid var(--line);
+                border-radius: var(--r-lg);
+                padding: 28px;
+                background: var(--panel);
+                box-shadow: var(--shadow);
+                display: grid;
+                gap: var(--s-md);
+            }
+            .pricing-card.pro {
+                border-color: var(--primary-border);
+                box-shadow:
+                    0 0 0 1px var(--primary-border),
+                    var(--shadow);
+            }
+            .pricing-card h3 {
+                font-size: 20px;
+                margin: 0;
+            }
+            .pricing-card .price {
+                font-size: 42px;
+                font-weight: 800;
+                line-height: 1;
+            }
+            .pricing-card .price small {
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--muted);
+            }
+            .pricing-card ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: grid;
+                gap: var(--s-sm);
+            }
+            .pricing-card li {
+                font-size: var(--font);
+                display: flex;
+                align-items: center;
+                gap: var(--s-sm);
+            }
+            .pricing-card li::before {
+                content: "✓";
+                color: var(--good);
+                font-weight: 700;
+                flex: 0 0 auto;
+            }
+            .pricing-card .btn {
+                width: 100%;
+                height: 34px;
+                font-weight: 600;
+                font-size: 13px;
+            }
+
+            /* Quick start */
+            .quick-start {
+                background: var(--soft);
+                border-radius: var(--r-lg);
+                padding: 24px;
+                margin: 0 0 48px;
+            }
+            .quick-start code {
+                display: block;
+                background: var(--panel);
+                border: 1px solid var(--line);
+                border-radius: var(--r);
+                padding: 10px 14px;
+                font-family: var(--font-mono);
+                font-size: 11px;
+                margin: 8px 0;
+                overflow-x: auto;
+                white-space: pre-wrap;
+            }
+
+            /* Footer */
+            .footer {
+                text-align: center;
+                padding: 32px 0;
+                color: var(--muted);
+                font-size: var(--font-sm);
+                border-top: 1px solid var(--divider-color);
+            }
+            .footer a {
+                color: var(--primary);
+                text-decoration: none;
+            }
+            .footer a:hover {
+                text-decoration: underline;
+            }
+
+            /* Responsive */
+            @media (max-width: 760px) {
+                .hero h1 {
+                    font-size: 28px;
+                }
+                .hero p {
+                    font-size: 15px;
+                }
+                .stats-bar {
+                    gap: 20px;
+                }
+                .pricing-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="landing">
+            <!-- ═══════════════════════════════════════════════════════════════════
+         HERO
+         ════════════════════════════════════════════════════════════════ -->
+            <section class="hero">
+                <h1>
+                    Compact <span class="gradient-text">SaaS</span> Components
+                </h1>
+                <p>
+                    200+ ready-to-copy UI components for your dashboard. Copy,
+                    paste, ship — no config, no lock-in, no bloat.
+                </p>
+                <div class="hero-cta">
+                    <a
+                        href="https://gumroad.com/l/saasblocks"
+                        class="btn primary"
+                        >Buy Pro — $149</a
+                    >
+                    <a href="#free" class="btn">Get Free Tier</a>
+                    <a
+                        href="https://github.com/your-org/saasblocks"
+                        class="btn ghost"
+                        >GitHub</a
+                    >
+                </div>
+            </section>
+
+            <!-- ═══════════════════════════════════════════════════════════════════
+         STATS
+         ════════════════════════════════════════════════════════════════ -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-num">200+</div>
+                    <div class="stat-label">Components</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">5</div>
+                    <div class="stat-label">Themes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">~8 KB</div>
+                    <div class="stat-label">Minified CSS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">0</div>
+                    <div class="stat-label">Dependencies</div>
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════════
+         EMBEDDED GALLERY (FREE COMPONENTS)
+         ════════════════════════════════════════════════════════════════ -->
+            <h2 class="section-title" id="free">Browse Free Components</h2>
+            <p class="section-sub">80 components · 3 themes · forever free</p>
+
+            <div class="gallery-preview">
+                <!--
+        The gallery is embedded via an iframe or directly loaded here.
+        For a real deployment, embed the gallery viewer:
+      -->
+                <p
+                    style="
+                        text-align: center;
+                        color: var(--muted);
+                        padding: 20px;
+                    "
+                >
+                    🖼 Component gallery loads here —
+                    <a href="../compact-saas-component-gallery.html"
+                        >open full gallery</a
+                    >
+                </p>
+                <!-- In production, you'd embed the actual gallery engine here. -->
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════════
+         PRICING
+         ════════════════════════════════════════════════════════════════ -->
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-sub">
+                One free tier. One pro tier. No subscriptions.
+            </p>
+
+            <div class="pricing-grid">
+                <!-- Free -->
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0</div>
+                    <p class="tiny">For personal projects &amp; prototypes.</p>
+                    <ul>
+                        <li>80 components</li>
+                        <li>3 themes (Clean, Graphite, Dracula)</li>
+                        <li>CSS custom properties</li>
+                        <li>Copy-paste ready</li>
+                        <li>MIT licensed</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="#free" class="btn">Browse Components</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card pro">
+                    <h3>Pro</h3>
+                    <div class="price">$149 <small>one-time</small></div>
+                    <p class="tiny">For commercial SaaS &amp; teams.</p>
+                    <ul>
+                        <li>200+ components</li>
+                        <li>
+                            All 5 themes (Clean, Graphite, Dracula, DaVinci,
+                            Casual)
+                        </li>
+                        <li>1 year of updates</li>
+                        <li>Component source files</li>
+                        <li>Commercial license</li>
+                        <li>Priority support</li>
+                        <li>Gallery engine included</li>
+                    </ul>
+                    <a
+                        href="https://gumroad.com/l/saasblocks"
+                        class="btn primary"
+                        >Buy Pro — $149</a
+                    >
+                </div>
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════════
+         QUICK START
+         ════════════════════════════════════════════════════════════════ -->
+            <h2 class="section-title">Get Started in 30 Seconds</h2>
+            <p class="section-sub">
+                Drop one link in your &lt;head&gt; and start building.
+            </p>
+
+            <div class="quick-start">
+                <strong class="strong">Free CDN (unpkg)</strong>
+                <code
+                    >&lt;link rel="stylesheet"
+                    href="https://unpkg.com/saasblocks/dist/free/saasblocks.min.css"&gt;</code
+                >
+
+                <strong class="strong" style="display: block; margin-top: 16px"
+                    >npm</strong
+                >
+                <code>npm install saasblocks</code>
+
+                <strong class="strong" style="display: block; margin-top: 16px"
+                    >Then use any component:</strong
+                >
+                <code
+                    >&lt;button class="btn primary"&gt;Save
+                    Changes&lt;/button&gt; &lt;span class="chip
+                    blue"&gt;Active&lt;/span&gt; &lt;div
+                    class="progress"&gt;&lt;span
+                    style="width:70%"&gt;&lt;/span&gt;&lt;/div&gt;</code
+                >
+            </div>
+
+            <!-- ═══════════════════════════════════════════════════════════════════
+         FOOTER
+         ════════════════════════════════════════════════════════════════ -->
+            <div class="footer">
+                <p>
+                    <strong>Compact SaaS Components</strong> —
+                    <a href="https://github.com/your-org/saasblocks">GitHub</a>
+                    · <a href="https://gumroad.com/l/saasblocks">Gumroad</a> ·
+                    <a href="https://www.npmjs.com/package/saasblocks">npm</a>
+                </p>
+                <p>MIT License · Built for builders</p>
+            </div>
+        </div>
+    </body>
+</html>

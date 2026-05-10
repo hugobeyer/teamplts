@@ -1,0 +1,61 @@
+/* ==========================================================================
+   GRAPHITE THEME
+   ========================================================================== */
+
+[data-theme="graphite"] {
+    --primary: #4b5563;
+    --primary-light: #e5e7eb;
+    --primary-border: #d1d5db;
+    --primary-bg: #f3f4f6;
+    --good: #059669;
+    --good-light: #d1fae5;
+    --good-border: #6ee7b7;
+    --bad: #dc2626;
+    --bad-light: #fee2e2;
+    --bad-border: #fca5a5;
+    --warn: #d97706;
+    --warn-light: #fef3c7;
+    --warn-border: #fcd34d;
+
+    --bg: #969ca8;
+    --panel: #e3e6ec;
+    --panel-alt: #d7dbe3;
+    --line: #bec4ce;
+    --text: #1f2937;
+    --muted: #5b636f;
+    --soft: #d7dbe3;
+    --shadow: 0 3px 12px rgba(15, 23, 42, 0.1);
+    --overlay-bg: rgba(150, 156, 168, 0.92);
+    --callout-bg: #f3f4f6;
+
+    --r-xs: 2px;
+    --r-sm: 3px;
+    --r: 4px;
+    --r-lg: 6px;
+
+    --chip-bg: #e5e7eb;
+    --chip-text: #4b5563;
+    --switch-off: #d1d5db;
+    --switch-on: #6b7280;
+    --kbd-bg: #f9fafb;
+    --skeleton-a: #e5e7eb;
+    --skeleton-b: #f3f4f6;
+    --bar-bg: #d1d5db;
+    --bar-fg: #6b7280;
+    --spark-fg: #6b7280;
+    --dropzone-bg: #f3f4f6;
+    --code-bg: #f3f4f6;
+    --code-text: #374151;
+    --stat-bg: #f9fafb;
+    --rating-fill: #d97706;
+    --thumbnail-a: #e5e7eb;
+    --thumbnail-b: #d1d5db;
+    --day-bg: #f3f4f6;
+    --day-muted: #d1d5db;
+    --progress-bg: #e5e7eb;
+    --divider-color: #d1d5db;
+    --soft-row-line: #e5e7eb;
+    --tab-line-color: #e5e7eb;
+    --avatar-bg: #e5e7eb;
+    --avatar-text: #4b5563;
+}

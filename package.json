@@ -1,0 +1,32 @@
+{
+  "name": "saasblocks",
+  "version": "1.0.0",
+  "description": "Compact SaaS UI component library — ~200 components, 5 themes, and a gallery viewer for building dashboards fast.",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "release": "node scripts/release.js",
+    "screenshots": "node scripts/screenshots.js"
+  },
+  "keywords": [
+    "saas",
+    "components",
+    "ui",
+    "dashboard",
+    "tailwind-alternative",
+    "gallery"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "puppeteer": "^22.0.0",
+    "terser": "^5.27.0"
+  }
+}

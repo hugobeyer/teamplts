@@ -1,0 +1,130 @@
+import { icon, button, chip, toggle } from '../../engine/helpers.js';
+
+export default [
+  {
+    name: "Bar chart",
+    group: "Charts",
+    notes: "Mini visual",
+    code: `<div class="stack"><div class="row between"><span class="text">Tasks</span><strong class="tiny">72</strong></div><div class="bar-chart"><span style="height:45%"></span><span style="height:80%"></span><span style="height:60%"></span><span style="height:95%"></span><span style="height:52%"></span></div></div>`,
+  },
+  {
+    name: "Spark bars",
+    group: "Charts",
+    notes: "Tiny trend",
+    code: `<div class="row between"><div><div class="strong">+18%</div><div class="text">Conversion</div></div><div class="spark"><span style="height:30%"></span><span style="height:46%"></span><span style="height:62%"></span><span style="height:80%"></span></div></div>`,
+  },
+  {
+    name: "KPI trio",
+    group: "Charts",
+    notes: "Metric cluster",
+    code: `<div class="grid3"><div><strong>91%</strong><div class="tiny">SLA</div></div><div><strong>14</strong><div class="tiny">Open</div></div><div><strong>3</strong><div class="tiny">Risk</div></div></div>`,
+  },
+  {
+    name: "Progress stack",
+    group: "Charts",
+    notes: "Multiple meters",
+    code: `<div class="stack"><div class="progress"><span style="width:40%"></span></div><div class="progress"><span style="width:72%"></span></div><div class="progress"><span style="width:88%"></span></div></div>`,
+  },
+  {
+    name: "Quota meter",
+    group: "Charts",
+    notes: "Label + meter",
+    code: `<div class="stack"><div class="row between"><span class="text">Storage</span><span class="tiny">18.2 / 25 GB</span></div><div class="progress"><span style="width:73%"></span></div></div>`,
+  },
+  {
+    name: "Calendar grid",
+    group: "Charts",
+    notes: "Tiny month",
+    code: `<div class="calendar-grid"><span class="day">1</span><span class="day">2</span><span class="day active">3</span><span class="day">4</span><span class="day">5</span><span class="day">6</span><span class="day">7</span></div>`,
+  },
+  {
+    name: "Pie chart",
+    group: "Charts",
+    notes: "3-color split",
+    code: `<div class="row between"><div class="pie"></div><div class="stack"><div class="row"><span class="tag-dot" style="background:var(--primary)"></span><span class="text">Design 45%</span></div><div class="row"><span class="tag-dot" style="background:#dbeafe"></span><span class="text">Dev 25%</span></div><div class="row"><span class="tag-dot" style="background:#fef3f2"></span><span class="text">QA 30%</span></div></div></div>`,
+  },
+  {
+    name: "Donut chart",
+    group: "Charts",
+    notes: "64% fill",
+    code: `<div class="row between"><div><div class="donut"></div></div><div><div class="strong">64%</div><div class="text">Completion</div></div><div class="stack"><div class="text">12 done</div><div class="text">7 left</div></div></div>`,
+  },
+  {
+    name: "Gauge meter",
+    group: "Charts",
+    notes: "Semicircular",
+    code: `<div class="stack" style="align-items:center"><div class="gauge"><div class="gauge-inner"></div></div><div class="row"><strong class="strong">72%</strong><span class="tiny">of capacity</span></div></div>`,
+  },
+  {
+    name: "Line chart",
+    group: "Charts",
+    notes: "Gradient trend",
+    code: `<div class="stack"><div class="row between"><span class="text">Revenue</span><strong class="tiny">+24%</strong></div><div class="line-chart"><span style="--h:22%"></span><span style="--h:34%"></span><span style="--h:28%"></span><span style="--h:45%"></span><span style="--h:60%"></span><span style="--h:52%"></span><span style="--h:78%"></span></div></div>`,
+  },
+  {
+    name: "Area chart",
+    group: "Charts",
+    notes: "Filled trend",
+    code: `<div class="stack"><div class="area-chart"><span style="height:12%"></span><span style="height:18%"></span><span style="height:24%"></span><span style="height:40%"></span><span style="height:55%"></span><span style="height:48%"></span><span style="height:72%"></span></div><div class="row between"><span class="tiny">Jan</span><span class="tiny">Jul</span></div></div>`,
+  },
+  {
+    name: "Stacked bars",
+    group: "Charts",
+    notes: "Segment composition",
+    code: `<div class="stack"><div class="row between"><span class="text">Resource mix</span><span class="tiny">CPU / Mem / Net</span></div><div class="stacked"><span style="width:40%;background:var(--primary)"></span><span style="width:35%;background:#93c5fd"></span><span style="width:25%;background:#dbeafe"></span></div></div>`,
+  },
+  {
+    name: "Horizontal bars",
+    group: "Charts",
+    notes: "Row bars",
+    code: `<div class="stack"><div class="h-bar"><span class="text" style="width:36px">Design</span><span class="bar" style="width:80%"></span><span class="tiny">80%</span></div><div class="h-bar"><span class="text" style="width:36px">Dev</span><span class="bar good" style="width:55%"></span><span class="tiny">55%</span></div><div class="h-bar"><span class="text" style="width:36px">QA</span><span class="bar bad" style="width:30%"></span><span class="tiny">30%</span></div></div>`,
+  },
+  {
+    name: "Funnel chart",
+    group: "Charts",
+    notes: "Conversion steps",
+    code: `<div class="funnel"><span style="width:100%">1,240</span><span>992</span><span>546</span><span>302</span></div>`,
+  },
+  {
+    name: "Heatmap",
+    group: "Charts",
+    notes: "Activity grid",
+    code: `<div class="stack"><div class="heat-row"><span class="heat-cell hi"></span><span class="heat-cell md"></span><span class="heat-cell lo"></span><span class="heat-cell"></span><span class="heat-cell md"></span></div><div class="heat-row"><span class="heat-cell md"></span><span class="heat-cell hi"></span><span class="heat-cell hi"></span><span class="heat-cell md"></span><span class="heat-cell lo"></span></div><div class="heat-row"><span class="heat-cell lo"></span><span class="heat-cell md"></span><span class="heat-cell hi"></span><span class="heat-cell hi"></span><span class="heat-cell md"></span></div><div class="row between"><span class="tiny">Mon</span><span class="tiny">Fri</span></div></div>`,
+  },
+  {
+    name: "Comparison chart",
+    group: "Charts",
+    notes: "Two series",
+    code: `<div class="stack"><div class="row between"><span class="text">This year</span><span class="tiny">vs last</span></div><div class="bar-chart" style="height:24px"><span style="height:60%;background:#93c5fd;width:40%"></span><span style="height:50%;background:var(--primary);width:40%"></span><span style="height:75%;background:#93c5fd;width:40%"></span><span style="height:85%;background:var(--primary);width:40%"></span><span style="height:45%;background:#93c5fd;width:40%"></span></div><div class="row"><span class="tag-dot" style="background:var(--primary)"></span><span class="tiny" style="margin-right:8px">Current</span><span class="tag-dot" style="background:#93c5fd"></span><span class="tiny">Previous</span></div></div>`,
+  },
+  {
+    name: "Weekly activity",
+    group: "Charts",
+    notes: "7-day bars",
+    code: `<div class="stack"><div class="row between"><span class="tiny">M</span><span class="tiny">T</span><span class="tiny">W</span><span class="tiny">T</span><span class="tiny">F</span><span class="tiny">S</span><span class="tiny">S</span></div><div class="bar-chart" style="height:24px"><span style="height:40%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:90%"></span><span style="height:65%"></span><span style="height:30%"></span><span style="height:20%"></span></div></div>`,
+  },
+  {
+    name: "Monthly trend",
+    group: "Charts",
+    notes: "12-month",
+    code: `<div class="stack"><div class="bar-chart" style="height:20px;gap:2px"><span style="height:30%"></span><span style="height:25%"></span><span style="height:40%"></span><span style="height:55%"></span><span style="height:60%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:80%"></span><span style="height:65%"></span><span style="height:85%"></span><span style="height:90%"></span><span style="height:75%"></span></div><div class="row between"><span class="tiny">J</span><span class="tiny">F</span><span class="tiny">M</span><span class="tiny">A</span><span class="tiny">M</span><span class="tiny">J</span><span class="tiny">J</span><span class="tiny">A</span><span class="tiny">S</span><span class="tiny">O</span><span class="tiny">N</span><span class="tiny">D</span></div></div>`,
+  },
+  {
+    name: "Progress ring",
+    group: "Charts",
+    notes: "SVG circle",
+    code: `<div class="row between"><div class="ring"><svg width="30" height="30" viewBox="0 0 30 30"><circle class="bg" cx="15" cy="15" r="11"></circle><circle class="fg" cx="15" cy="15" r="11" stroke-dasharray="69.1" stroke-dashoffset="24.9"></circle></svg></div><div><div class="strong">64%</div><div class="text">Complete</div></div>${chip("+8%", "green")}</div>`,
+  },
+  {
+    name: "Bullet chart",
+    group: "Charts",
+    notes: "Target vs actual",
+    code: `<div class="stack"><div class="row between"><span class="text">Revenue target</span><span class="tiny">$84k / $120k</span></div><div class="progress" style="position:relative"><span style="width:70%"></span></div></div>`,
+  },
+  {
+    name: "Multi series",
+    group: "Charts",
+    notes: "Grouped bars",
+    code: `<div class="stack"><div class="bar-chart" style="height:24px;gap:6px"><span style="height:60%;width:30%;background:#93c5fd"></span><span style="height:50%;width:30%;background:var(--primary)"></span><span style="height:75%;width:30%;background:#93c5fd"></span><span style="height:85%;width:30%;background:var(--primary)"></span><span style="height:45%;width:30%;background:#93c5fd"></span></div><div class="row"><span class="tag-dot" style="background:var(--primary)"></span><span class="tiny" style="margin-right:6px">Sales</span><span class="tag-dot" style="background:#93c5fd"></span><span class="tiny">Target</span></div></div>`,
+  },
+];

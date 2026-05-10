@@ -1,0 +1,157 @@
+/* ==========================================================================
+   COMPACT SAAS COMPONENT GALLERY ── BASE LAYOUT CSS
+   ==========================================================================
+   Drop this file alongside compact-saas-component-gallery.html.
+   Add a class to <main id="gallery" class="gallery"> to switch layouts:
+
+     gallery                → default auto-fill card grid (built-in)
+     gallery gallery-grouped → grouped cards with borders & shadows
+
+   Usage:
+     <main id="gallery" class="gallery gallery-grouped"></main>
+   ========================================================================== */
+
+/* ==========================================================================
+   GROUPED CARD LAYOUT  (.gallery-grouped)
+   ========================================================================== */
+
+.gallery.gallery-grouped {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--s-lg);
+}
+
+.gallery-grouped {
+    align-items: stretch;
+}
+
+.gallery-grouped .doc-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: var(--s-md);
+    box-shadow: var(--shadow);
+    gap: var(--s);
+    grid-template-rows: auto 1fr auto;
+    transition:
+        box-shadow 0.2s,
+        transform 0.15s,
+        border-color 0.2s;
+}
+
+.gallery-grouped .doc-card:hover {
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border-color: var(--primary-border);
+}
+
+.gallery-grouped .doc-head {
+    border-bottom: 1px solid var(--divider-color);
+    padding-bottom: var(--s-xs);
+}
+
+.gallery-grouped .doc-title {
+    font-size: var(--font);
+}
+
+.gallery-grouped .preview {
+    border: 1px dashed var(--line);
+    border-radius: var(--r);
+    background: var(--panel-alt);
+    min-height: 48px;
+    align-content: center;
+}
+
+.gallery-grouped .doc-actions {
+    align-self: end;
+}
+
+/* ==========================================================================
+   CARD STATUS ACCENTS  (cosmetic)
+   ========================================================================== */
+
+.preview[data-frame="plain"] {
+    border: 1px dashed var(--line);
+    background: transparent;
+}
+
+/* ==========================================================================
+   COPY BUTTON ── VISUAL FEEDBACK
+   ========================================================================== */
+
+.doc-actions .icon-btn.copied {
+    background: var(--good-light);
+    color: var(--good);
+    border-color: var(--good-border);
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+/* ==========================================================================
+   THEME-SPECIFIC OVERRIDES
+   ========================================================================== */
+
+[data-theme="graphite"] body {
+    background: linear-gradient(150deg, #a5abb6, #8e94a1);
+}
+
+[data-theme="dracula"] .gallery-grouped .doc-card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dracula"] .gallery-grouped .preview,
+[data-theme="dracula"] .preview[data-frame="plain"],
+[data-theme="dracula"] .gallery .doc-card {
+    border: none;
+}
+
+[data-theme="davinci"] body {
+    background: linear-gradient(145deg, #1f1b16, #181411);
+}
+
+[data-theme="davinci"] .gallery-grouped .doc-card {
+    border: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="davinci"] .gallery-grouped .preview,
+[data-theme="davinci"] .preview[data-frame="plain"],
+[data-theme="davinci"] .gallery .doc-card {
+    border: none;
+}
+
+[data-theme="casual"] body {
+    background: linear-gradient(160deg, #eff2ef, #e3e6e1);
+}
+
+@supports (background: linear-gradient(150deg, #000, #000)) {
+    [data-theme="graphite"] body,
+    [data-theme="davinci"] body,
+    [data-theme="casual"] body {
+        background-attachment: fixed;
+    }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+    .gallery {
+        display: block;
+    }
+
+    .doc-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        margin-bottom: 6px;
+        padding: 6px;
+    }
+
+    .top,
+    .doc-actions {
+        display: none;
+    }
+}

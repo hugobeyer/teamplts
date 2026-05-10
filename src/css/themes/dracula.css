@@ -1,0 +1,56 @@
+/* ==========================================================================
+   DRACULA THEME
+   ========================================================================== */
+
+[data-theme="dracula"] {
+    --primary: #bd93f9;
+    --primary-light: #3a3250;
+    --primary-border: #6d5a9e;
+    --primary-bg: #3a3250;
+    --good: #50fa7b;
+    --good-light: #1a3a2a;
+    --good-border: #2e7d4f;
+    --bad: #ff5555;
+    --bad-light: #3a2020;
+    --bad-border: #6e2a2a;
+    --warn: #f1fa8c;
+    --warn-light: #3a3a20;
+    --warn-border: #7a7a30;
+
+    --bg: #21222c;
+    --panel: #282a36;
+    --panel-alt: #242631;
+    --line: #44475a;
+    --text: #f8f8f2;
+    --muted: #6272a4;
+    --soft: #242631;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+    --overlay-bg: rgba(26, 27, 35, 0.94);
+    --callout-bg: #242631;
+
+    --chip-bg: #3a3d52;
+    --chip-text: #f8f8f2;
+    --switch-off: #44475a;
+    --switch-on: #bd93f9;
+    --kbd-bg: #3a3d52;
+    --skeleton-a: #242631;
+    --skeleton-b: #3a3d52;
+    --bar-bg: #3a3250;
+    --bar-fg: #bd93f9;
+    --spark-fg: #bd93f9;
+    --dropzone-bg: #242631;
+    --code-bg: #242631;
+    --code-text: #f8f8f2;
+    --stat-bg: #242631;
+    --rating-fill: #f1fa8c;
+    --thumbnail-a: #3a3250;
+    --thumbnail-b: #1a3a2a;
+    --day-bg: #242631;
+    --day-muted: #44475a;
+    --progress-bg: #3a3d52;
+    --divider-color: #44475a;
+    --soft-row-line: #3a3d52;
+    --tab-line-color: #44475a;
+    --avatar-bg: #3a3250;
+    --avatar-text: #bd93f9;
+}

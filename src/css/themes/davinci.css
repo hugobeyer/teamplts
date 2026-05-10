@@ -1,0 +1,61 @@
+/* ==========================================================================
+   DA VINCI CODE THEME ── warm dark + gold
+   ========================================================================== */
+
+[data-theme="davinci"] {
+    --primary: #cfa35e;
+    --primary-light: #342b1e;
+    --primary-border: #5a4a35;
+    --primary-bg: #2d251a;
+    --good: #7aa86a;
+    --good-light: #1f2a1c;
+    --good-border: #3d5a32;
+    --bad: #c95a47;
+    --bad-light: #2e1d1a;
+    --bad-border: #5a3028;
+    --warn: #d4a055;
+    --warn-light: #2e2619;
+    --warn-border: #5a4a30;
+
+    --bg: #1a1612;
+    --panel: #231f1a;
+    --panel-alt: #2c2721;
+    --line: #3a332b;
+    --text: #e8dcc5;
+    --muted: #8d8270;
+    --soft: #2c2721;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    --overlay-bg: rgba(26, 22, 18, 0.94);
+    --callout-bg: #2c2721;
+
+    --r-xs: 2px;
+    --r-sm: 3px;
+    --r: 4px;
+    --r-lg: 6px;
+
+    --chip-bg: #3a332b;
+    --chip-text: #e8dcc5;
+    --switch-off: #3a332b;
+    --switch-on: #cfa35e;
+    --kbd-bg: #2c2721;
+    --skeleton-a: #2c2721;
+    --skeleton-b: #3a332b;
+    --bar-bg: #342b1e;
+    --bar-fg: #cfa35e;
+    --spark-fg: #cfa35e;
+    --dropzone-bg: #2c2721;
+    --code-bg: #2c2721;
+    --code-text: #e8dcc5;
+    --stat-bg: #2c2721;
+    --rating-fill: #d4a055;
+    --thumbnail-a: #342b1e;
+    --thumbnail-b: #1f2a1c;
+    --day-bg: #2c2721;
+    --day-muted: #3a332b;
+    --progress-bg: #3a332b;
+    --divider-color: #3a332b;
+    --soft-row-line: #3a332b;
+    --tab-line-color: #3a332b;
+    --avatar-bg: #342b1e;
+    --avatar-text: #cfa35e;
+}

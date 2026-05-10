@@ -1,0 +1,61 @@
+/* ==========================================================================
+   CASUAL THEME ── warm light + green (WhatsApp-inspired)
+   ========================================================================== */
+
+[data-theme="casual"] {
+    --primary: #25d366;
+    --primary-light: #dcf8c6;
+    --primary-border: #a5d6a7;
+    --primary-bg: #e8f5e9;
+    --good: #25d366;
+    --good-light: #dcf8c6;
+    --good-border: #a5d6a7;
+    --bad: #ef5350;
+    --bad-light: #ffebee;
+    --bad-border: #ef9a9a;
+    --warn: #ffa726;
+    --warn-light: #fff8e1;
+    --warn-border: #ffcc80;
+
+    --bg: #e8ebe6;
+    --panel: #ffffff;
+    --panel-alt: #f5f6f5;
+    --line: #e0e0db;
+    --text: #111b21;
+    --muted: #667781;
+    --soft: #f0f2f0;
+    --shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    --overlay-bg: rgba(232, 235, 230, 0.9);
+    --callout-bg: #f0f2f0;
+
+    --r-xs: 4px;
+    --r-sm: 5px;
+    --r: 6px;
+    --r-lg: 8px;
+
+    --chip-bg: #e8f5e9;
+    --chip-text: #25d366;
+    --switch-off: #d0d5dd;
+    --switch-on: #25d366;
+    --kbd-bg: #ffffff;
+    --skeleton-a: #edf0ed;
+    --skeleton-b: #f8faf7;
+    --bar-bg: #dcf8c6;
+    --bar-fg: #25d366;
+    --spark-fg: #25d366;
+    --dropzone-bg: #f5f6f5;
+    --code-bg: #f5f6f5;
+    --code-text: #111b21;
+    --stat-bg: #ffffff;
+    --rating-fill: #ffa726;
+    --thumbnail-a: #dcf8c6;
+    --thumbnail-b: #e8f5e9;
+    --day-bg: #f5f6f5;
+    --day-muted: #d0d5dd;
+    --progress-bg: #e8ebe6;
+    --divider-color: #e0e0db;
+    --soft-row-line: #e0e0db;
+    --tab-line-color: #e0e0db;
+    --avatar-bg: #dcf8c6;
+    --avatar-text: #25d366;
+}
