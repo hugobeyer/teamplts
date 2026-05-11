@@ -1,51 +1,60 @@
 <!doctype html>
 <html lang="en" data-theme="clean">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>teamplts — Compact SaaS Component Gallery</title>
-<script>
-  if (!window.lucide) {
-    var s = document.createElement('script');
-    s.src = 'https://unpkg.com/lucide@latest';
-    document.head.appendChild(s);
-  }
-</script>
-<script>
-  (function(){
-    var t = localStorage.getItem('gallery-theme') || 'clean';
-    document.documentElement.setAttribute('data-theme', t);
-    window.__galleryTheme = t;
-  })();
-</script>
-<link rel="stylesheet" href="./compact-saas-component-gallery.css">
-<style>
-.page { max-width:1500px; margin:0 auto; display:grid; gap:var(--s-md); padding:var(--s-lg); }
-.top { position:sticky; top:0; z-index:5; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:var(--s-md); align-items:start; background:var(--overlay-bg); backdrop-filter:blur(10px); padding:var(--s-sm) 0 2px; }
-.brand h1 { font-size:18px; margin:0; font-weight:700; background:linear-gradient(135deg,var(--primary),color-mix(in srgb,var(--primary) 60%,#7c3aed)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-.brand .sub { font-size:var(--font-sm); color:var(--muted); margin:var(--s-xs) 0 0; }
-.tools { display:flex; align-items:center; gap:var(--s); flex-wrap:wrap; justify-content:flex-end; }
-.search { width:200px; }
-body { background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif; margin:0; transition:background .25s,color .25s; }
-@media(max-width:760px){ .top { grid-template-columns:1fr; } .tools { justify-content:flex-start; } .search { width:100%; } body { padding:10px; } }
-</style>
-</head>
-<body>
-<div class="page">
-  <header class="top">
-    <div class="brand">
-      <h1>teamplts</h1>
-      <p class="sub">217 copy-paste SaaS components. 5 themes. Zero deps.</p>
-    </div>
-    <div class="tools">
-      <input class="input search" id="search" placeholder="Search components…">
-      <div class="seg" id="filters" aria-label="Filter by group"></div>
-      <div class="seg" id="themeToggles" aria-label="Switch theme"></div>
-      <button class="btn primary" id="copyAll" type="button"><i data-lucide="copy"></i>Copy all</button>
-    </div>
-  </header>
-  <main id="gallery" class="gallery"></main>
-</div>
-<script src="./dist/gallery.bundle.js"></script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>teamplts — Component Gallery</title>
+        <script>
+            if (!window.lucide)
+                document.write(
+                    '<script src="https://unpkg.com/lucide@latest"><\/script>',
+                );
+        </script>
+        <link rel="stylesheet" href="./compact-saas-component-gallery.css" />
+        <script>
+            (function () {
+                var saved =
+                    (typeof localStorage !== "undefined" &&
+                        localStorage.getItem("gallery-theme")) ||
+                    "clean";
+                document.documentElement.setAttribute("data-theme", saved);
+                window.__galleryTheme = saved;
+            })();
+        </script>
+    </head>
+    <body>
+        <div class="page">
+            <header class="top">
+                <div>
+                    <h1>teamplts</h1>
+                    <p class="sub">
+                        217 copy-paste SaaS components. 5 themes. Click to copy.
+                        <strong>Free.</strong>
+                    </p>
+                </div>
+                <div class="tools">
+                    <input
+                        class="input search"
+                        id="search"
+                        placeholder="Search components..."
+                    />
+                    <div
+                        class="seg"
+                        id="filters"
+                        aria-label="Gallery filters"
+                    ></div>
+                    <div
+                        class="seg"
+                        id="themeToggles"
+                        aria-label="Theme switch"
+                    ></div>
+                    <button class="btn primary" id="copyAll" type="button">
+                        <i data-lucide="copy"></i>Copy all
+                    </button>
+                </div>
+            </header>
+            <main id="gallery" class="gallery"></main>
+        </div>
+        <script src="./dist/gallery.bundle.js"></script>
+    </body>
 </html>
